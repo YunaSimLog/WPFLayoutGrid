@@ -1,0 +1,31 @@
+﻿<Window x:Class="WPFLayoutGrid.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFLayoutGrid"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="0" Grid.Column="0" 
+                Grid.RowSpan="2" Grid.ColumnSpan="2"
+                HorizontalAlignment="Left"
+                Content="0, 0" FontSize="30" Margin="5"/>
+        <!--<Button Grid.Row="0" Grid.Column="1" Content="0, 1" FontSize="30" Margin="5"/>-->
+        <Button Grid.Row="0" Grid.Column="2" 
+                VerticalAlignment="Bottom"
+                Content="0, 2" FontSize="30" Margin="5"/>
+        <!--<Button Grid.Row="1" Grid.Column="0" Content="1, 0" FontSize="30" Margin="5"/>-->
+        <!--<Button Grid.Row="1" Grid.Column="1" Content="1, 1" FontSize="30" Margin="5"/>-->
+        <Button Grid.Row="1" Grid.Column="2" Content="1, 2" FontSize="30" Margin="5"/>
+    </Grid>
+</Window>
